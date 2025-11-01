@@ -1,0 +1,31 @@
+[package]
+name = "AeroLinkSimple"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "pi_side_serial"
+path = "src/bin/pi_side_serial.rs"
+
+[[bin]]
+name = "pi_side_tcp"
+path = "src/bin/pi_side_tcp.rs"
+
+[[bin]]
+name = "pi_side_udp"
+path = "src/bin/pi_side_udp.rs"
+[[bin]]
+name = "cli_ui"
+path = "src/bin/cli_ui.rs"
+[dependencies]
+tokio = { version = "1.40", features = ["full"] }
+tokio-serial = "5.4"
+serialport = "4.5"
+anyhow = "1.0"
+bytes = "1.7"
+ratatui = "0.28"
+crossterm = "0.28"
+tracing = "0.1.41"
+tracing-subscriber = "0.3.20"
+log = "0.4.28"
+env_logger = "0.11.8"
